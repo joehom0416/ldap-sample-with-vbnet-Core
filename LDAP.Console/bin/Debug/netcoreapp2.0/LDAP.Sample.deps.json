@@ -1,0 +1,130 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.0",
+    "signature": "3423b479d570b8192d3fd819377bbf2a133c2c41"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.0": {
+      "LDAP.Sample/1.0.0": {
+        "dependencies": {
+          "System.DirectoryServices": "4.5.0-preview1-25914-04"
+        },
+        "runtime": {
+          "LDAP.Sample.dll": {}
+        }
+      },
+      "System.DirectoryServices/4.5.0-preview1-25914-04": {
+        "dependencies": {
+          "System.IO.FileSystem.AccessControl": "4.5.0-preview1-25914-04",
+          "System.Security.AccessControl": "4.5.0-preview1-25914-04",
+          "System.Security.Permissions": "4.5.0-preview1-25914-04",
+          "System.Security.Principal.Windows": "4.5.0-preview1-25914-04"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.DirectoryServices.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.0/System.DirectoryServices.dll": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      },
+      "System.IO.FileSystem.AccessControl/4.5.0-preview1-25914-04": {
+        "dependencies": {
+          "System.Security.AccessControl": "4.5.0-preview1-25914-04",
+          "System.Security.Principal.Windows": "4.5.0-preview1-25914-04"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.IO.FileSystem.AccessControl.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.0/System.IO.FileSystem.AccessControl.dll": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      },
+      "System.Security.AccessControl/4.5.0-preview1-25914-04": {
+        "dependencies": {
+          "System.Security.Principal.Windows": "4.5.0-preview1-25914-04"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.AccessControl.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      },
+      "System.Security.Permissions/4.5.0-preview1-25914-04": {
+        "dependencies": {
+          "System.Security.AccessControl": "4.5.0-preview1-25914-04"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Permissions.dll": {}
+        }
+      },
+      "System.Security.Principal.Windows/4.5.0-preview1-25914-04": {
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Principal.Windows.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.dll": {
+            "rid": "unix",
+            "assetType": "runtime"
+          },
+          "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.dll": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LDAP.Sample/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.DirectoryServices/4.5.0-preview1-25914-04": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-S5zrWWhXbmyt3S/mJKxTGEdlnntxJxXIrHOFsUunPz3VdIi4NbSO1MNjvqAIbpTDt6s/RBe+7BT1oy8HYYmGCw==",
+      "path": "system.directoryservices/4.5.0-preview1-25914-04",
+      "hashPath": "system.directoryservices.4.5.0-preview1-25914-04.nupkg.sha512"
+    },
+    "System.IO.FileSystem.AccessControl/4.5.0-preview1-25914-04": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2SziPIJOtXOF3knBkV4WeFd11gxnsYYZsaHWI8EnmQDGNr/4XmXWJpNUZzCfPHBdByy1NwMqvfrUNioIGLZIUA==",
+      "path": "system.io.filesystem.accesscontrol/4.5.0-preview1-25914-04",
+      "hashPath": "system.io.filesystem.accesscontrol.4.5.0-preview1-25914-04.nupkg.sha512"
+    },
+    "System.Security.AccessControl/4.5.0-preview1-25914-04": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0o6Nhz0jrAN5ZSqAhfeQd1wYfm8/4+hXjpDPlYpCiaLdXX3zwAs3itvnRmuUJDKcErAcNjZDBrg+gZnnU8UnxA==",
+      "path": "system.security.accesscontrol/4.5.0-preview1-25914-04",
+      "hashPath": "system.security.accesscontrol.4.5.0-preview1-25914-04.nupkg.sha512"
+    },
+    "System.Security.Permissions/4.5.0-preview1-25914-04": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xsOTlCAE6OxaLjwMRJeg0cg3zoxpfy9ZtRLW+uq0UH1XwYJTjwUaJ9o/QG+mH9jRZU60EmslMW7Ps9SnmsRvHw==",
+      "path": "system.security.permissions/4.5.0-preview1-25914-04",
+      "hashPath": "system.security.permissions.4.5.0-preview1-25914-04.nupkg.sha512"
+    },
+    "System.Security.Principal.Windows/4.5.0-preview1-25914-04": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-J4IeJoJ7L5q1DC2o+mIG7fm0RXCxIjhVG+WDVrnIRFurWlr+Ytv7lj1UyMhuZE+DkoOmU6J4P6Nm6fJNaziXLQ==",
+      "path": "system.security.principal.windows/4.5.0-preview1-25914-04",
+      "hashPath": "system.security.principal.windows.4.5.0-preview1-25914-04.nupkg.sha512"
+    }
+  }
+}

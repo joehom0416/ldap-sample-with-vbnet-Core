@@ -1,0 +1,4 @@
+c:\users\joosueong.sum\documents\visual studio 2017\Projects\LDAP.Console\LDAP.Console\obj\Debug\netcoreapp2.0\LDAP.Console.vbprojResolveAssemblyReference.cache
+c:\users\joosueong.sum\documents\visual studio 2017\Projects\LDAP.Console\LDAP.Console\obj\Debug\netcoreapp2.0\LDAP.Console.vbproj.CoreCompileInputs.cache
+c:\users\joosueong.sum\documents\visual studio 2017\Projects\LDAP.Console\LDAP.Console\obj\Debug\netcoreapp2.0\LDAP.Console.AssemblyInfoInputs.cache
+c:\users\joosueong.sum\documents\visual studio 2017\Projects\LDAP.Console\LDAP.Console\obj\Debug\netcoreapp2.0\LDAP.Console.AssemblyInfo.vb

@@ -9,3 +9,15 @@ c:\users\joosueong.sum\documents\visual studio 2017\Projects\LDAP.Console\LDAP.C
 c:\users\joosueong.sum\documents\visual studio 2017\Projects\LDAP.Console\LDAP.Console\obj\Debug\netcoreapp2.0\LDAP.Sample.vbprojResolveAssemblyReference.cache
 c:\users\joosueong.sum\documents\visual studio 2017\Projects\LDAP.Console\LDAP.Console\obj\Debug\netcoreapp2.0\LDAP.Sample.dll
 c:\users\joosueong.sum\documents\visual studio 2017\Projects\LDAP.Console\LDAP.Console\obj\Debug\netcoreapp2.0\LDAP.Sample.pdb
+C:\Users\joosueong.sum\Documents\GitHub\ldap-sample-with-vbnet-Core\LDAP.Console\bin\Debug\netcoreapp2.0\LDAP.Sample.deps.json
+C:\Users\joosueong.sum\Documents\GitHub\ldap-sample-with-vbnet-Core\LDAP.Console\bin\Debug\netcoreapp2.0\LDAP.Sample.runtimeconfig.json
+C:\Users\joosueong.sum\Documents\GitHub\ldap-sample-with-vbnet-Core\LDAP.Console\bin\Debug\netcoreapp2.0\LDAP.Sample.runtimeconfig.dev.json
+C:\Users\joosueong.sum\Documents\GitHub\ldap-sample-with-vbnet-Core\LDAP.Console\bin\Debug\netcoreapp2.0\LDAP.Sample.dll
+C:\Users\joosueong.sum\Documents\GitHub\ldap-sample-with-vbnet-Core\LDAP.Console\bin\Debug\netcoreapp2.0\LDAP.Sample.pdb
+C:\Users\joosueong.sum\Documents\GitHub\ldap-sample-with-vbnet-Core\LDAP.Console\obj\Debug\netcoreapp2.0\LDAP.Sample.vbprojAssemblyReference.cache
+C:\Users\joosueong.sum\Documents\GitHub\ldap-sample-with-vbnet-Core\LDAP.Console\obj\Debug\netcoreapp2.0\LDAP.Sample.AssemblyInfoInputs.cache
+C:\Users\joosueong.sum\Documents\GitHub\ldap-sample-with-vbnet-Core\LDAP.Console\obj\Debug\netcoreapp2.0\LDAP.Sample.AssemblyInfo.vb
+C:\Users\joosueong.sum\Documents\GitHub\ldap-sample-with-vbnet-Core\LDAP.Console\obj\Debug\netcoreapp2.0\LDAP.Sample.vbproj.CoreCompileInputs.cache
+C:\Users\joosueong.sum\Documents\GitHub\ldap-sample-with-vbnet-Core\LDAP.Console\obj\Debug\netcoreapp2.0\LDAP.Sample.dll
+C:\Users\joosueong.sum\Documents\GitHub\ldap-sample-with-vbnet-Core\LDAP.Console\obj\Debug\netcoreapp2.0\LDAP.Sample.pdb
+C:\Users\joosueong.sum\Documents\GitHub\ldap-sample-with-vbnet-Core\LDAP.Console\obj\Debug\netcoreapp2.0\LDAP.Sample.genruntimeconfig.cache

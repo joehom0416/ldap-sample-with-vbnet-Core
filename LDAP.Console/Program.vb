@@ -1,4 +1,5 @@
 Imports System
+Imports System.DirectoryServices
 Imports System.DirectoryServices.ActiveDirectory
 Imports System.Net
 Imports System.Net.NetworkInformation
@@ -6,24 +7,26 @@ Imports System.Net.NetworkInformation
 Module Program
     Sub Main(args As String())
         Dim username As String = Environment.UserName
-        Dim domain As String = GetFQDN()
         Console.WriteLine("User Name:" & username)
-        Console.WriteLine("Current Domain:" & domain)
-        Console.WriteLine("Is " & username & " exists in Domain Server -" & domain & ":")
-        If IsUserExistInDomain(username) Then
-            Console.WriteLine("Yes")
+        Console.WriteLine("=====================")
+        Console.Write("Enter LDAP path (put empty system will get for you):")
+        Dim ldapPath As String = Console.ReadLine()
+        Console.WriteLine("=====================")
+        If IsUserExistInDomain(username, ldapPath) Then
+            Console.WriteLine("Result:Success.")
         Else
-            Console.WriteLine("No")
+            Console.WriteLine("Result:Failed")
         End If
+
+        Console.WriteLine("Verify password of " & username)
+        Console.WriteLine("=====================")
         Console.Write("Password:")
         Dim pwd As String = GetInput()
         Console.WriteLine()
-
-        Console.WriteLine("Verify password of " & username)
-        If VerifyUserPassword(username, pwd) Then
-            Console.WriteLine("successful")
+        If VerifyUserPassword(username, pwd, ldapPath) Then
+            Console.WriteLine("Result:Success.")
         Else
-            Console.WriteLine("failed")
+            Console.WriteLine("Result:Failed")
         End If
 
 
@@ -52,17 +55,33 @@ Module Program
         Return pwd
     End Function
 
-    Function IsUserExistInDomain(ByVal username As String) As Boolean
-
-        Dim searcher As New DirectoryServices.DirectorySearcher("ObjectClass=user")
-        Console.WriteLine("LDAP Domain: " & searcher.SearchRoot.Name)
-        searcher.PageSize = Integer.MaxValue
-
-        searcher.SearchScope = DirectoryServices.SearchScope.Subtree
-        searcher.ClientTimeout = New TimeSpan(0, 0, 10)
-        ' searcher.Filter = String.Format("(&(objectCategory=Person)(anr={0}))", username)
-        searcher.Filter = String.Format("(&(SAMAccountName={0})(!(userAccountControl:1.2.840.113556.1.4.803:=2)))", username)
+    Function IsUserExistInDomain(ByVal username As String, ldapPath As String) As Boolean
         Try
+            Dim root As DirectoryEntry
+            If (String.IsNullOrEmpty(ldapPath)) Then
+                root = New DirectoryEntry()
+            Else
+                root = New DirectoryEntry(ldapPath)
+            End If
+
+
+            'Dim collections = root.Properties()
+            'For Each value As PropertyValueCollection In collections
+            '    Console.WriteLine(value.PropertyName)
+            '    Console.WriteLine(value.Value)
+            '    Console.WriteLine(value.Count)
+            'Next
+
+
+            Dim searcher As New DirectoryServices.DirectorySearcher(root)
+            'Console.WriteLine("LDAP Path: " & searcher.SearchRoot.Path)
+
+            searcher.PageSize = Integer.MaxValue
+            searcher.SearchScope = DirectoryServices.SearchScope.Subtree
+            searcher.ClientTimeout = New TimeSpan(0, 0, 10)
+            ' searcher.Filter = String.Format("(&(objectCategory=Person)(anr={0}))", username)
+            searcher.Filter = String.Format("(&(SAMAccountName={0})(!(userAccountControl:1.2.840.113556.1.4.803:=2)))", username)
+
             Dim result = searcher.FindOne()
             If result Is Nothing Then
                 Return False
@@ -81,8 +100,15 @@ Module Program
     ''' <param name="username">User Name</param>
     ''' <param name="password">Password</param>
     ''' <returns></returns>
-    Function VerifyUserPassword(ByVal username As String, ByVal password As String) As Boolean
-        Dim searcher As New DirectoryServices.DirectorySearcher("ObjectClass=user")
+    Function VerifyUserPassword(ByVal username As String, ByVal password As String, ldapPath As String) As Boolean
+
+        Dim root As DirectoryEntry
+        If (String.IsNullOrEmpty(ldapPath)) Then
+            root = New DirectoryEntry()
+        Else
+            root = New DirectoryEntry(ldapPath)
+        End If
+        Dim searcher As New DirectoryServices.DirectorySearcher(root)
         searcher.SearchRoot.Username = username
         searcher.SearchRoot.Password = password
         searcher.PageSize = Integer.MaxValue
